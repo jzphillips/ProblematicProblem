@@ -10,6 +10,7 @@ public partial class Program
     {
         bool cont;
         Random rng = new Random();
+        
         List<string> activities = new List<string>
         {
             "Movies", "Paintball", "Bowling", "Lazer Tag", "LAN Party", "Hiking", "Axe Throwing", "Wine Tasting"
@@ -112,7 +113,7 @@ public partial class Program
             Console.Write($"Ah, got it! {userName}, your random activity is: {randomActivity}! Is this ok or do you want to grab another activity? Keep/Redo: ");
             Console.WriteLine();
             string userAnswer = Console.ReadLine().ToLower();
-            cont = userAnswer == "Keep" || userAnswer == "Redo" ? true : false;
+            cont = userAnswer == "redo" ? true : false;
         }
     }
 }
